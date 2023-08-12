@@ -115,11 +115,11 @@ export default function Footer() {
                   Consult Now
                 </a>
               </p>
-              {/* <p>
-                <a href='#!' className='text-reset'>
-                  Orders
+              <p style={{ color: "#FFFFFF" }}>
+                <a style={{ color: "#FFFFFF" }} href='#!' className='text-reset'>
+                  <Link to="/career" style={{ color: "#FFFFFF" }}>Career</Link>
                 </a>
-              </p> */}
+              </p>
               <p style={{ color: "#FFFFFF" }}>
                 <a
                   style={{ color: "#FFFFFF" }}
@@ -129,6 +129,15 @@ export default function Footer() {
                   Help
                 </a>
               </p>
+              {/* <p style={{ color: "#FFFFFF" }}>
+                <a
+                  style={{ color: "#FFFFFF" }}
+                  href="#!"
+                  className="text-reset"
+                >
+                  Disclaimer : 
+                </a>
+              </p> */}
               <p style={{ color: "#FFFFFF" }}>
                 <Link to="/terms">
                 <a

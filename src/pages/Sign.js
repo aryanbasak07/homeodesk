@@ -82,7 +82,7 @@ function SignModule() {
                   style={{ width: "100%" }}
                 >
                   <MDBIcon fas icon="lock me-3" size="lg" />
-                  <MDBInput label="Password" id="form3" type="password" />
+                  <MDBInput label="Pin" id="form3" type="password" />
                 </div>
 
                 <div

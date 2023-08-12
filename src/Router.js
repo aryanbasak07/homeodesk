@@ -8,6 +8,7 @@ import SignModule from "./pages/Sign";
 import LoginModule from "./pages/Login";
 import TermsCon from "./pages/Term";
 import PrivacyPolicy from "./pages/Privacy";
+import Career from "./pages/Career";
 
 const Router = ()=>{
     return(
@@ -21,6 +22,7 @@ const Router = ()=>{
                 <Route exact path="/login" element={<LoginModule/>} />
                 <Route exact path="/terms" element={<TermsCon/>} />
                 <Route exact path="/privacypolicy" element={<PrivacyPolicy/>} />
+                <Route exact path="/career" element={<Career/>} />
             </Routes>
         </BrowserRouter>
     )

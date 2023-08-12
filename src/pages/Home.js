@@ -81,15 +81,17 @@ function Home() {
             <MDBCardBody>
               <MDBCardTitle>Welcome to HomeoDesk!</MDBCardTitle>
               <MDBCardText>
-                Your one stop need for all your problems. With years of experience and an amazing team of doctors,
-                we are committed to offer you with the best services.
+                Your one stop need for all your problems. With years of
+                experience and an amazing team of doctors, we are committed to
+                offer you with the best services.
               </MDBCardText>
-              <MDBBtn style={{backgroundColor: "#4F2D92"}}>
-              <Link to="/signup">
-                <a style={{color: "#FFFFFF"}}>
-                Join Us
+              <MDBBtn style={{ backgroundColor: "#4F2D92" }}>
+                <a>
+                  <Link to="/signup" style={{ color: "#FFFFFF" }}>
+                    Join Us
+                  </Link>
                 </a>
-              </Link></MDBBtn>{" "}
+              </MDBBtn>{" "}
               {/* Adding a button to the card */}
             </MDBCardBody>
           </MDBCard>
@@ -112,7 +114,7 @@ function Home() {
             position: "relative",
           }}
         >
-          Our Specialities
+          Our Specialities Consultation - 3 : 1 Career Queries
           <span
             style={{
               display: "flex",
@@ -254,16 +256,63 @@ function Home() {
           </MDBCardBody>
         </MDBCard>
       </div>
-      {/* <Wave
-        fill="#4F2D92"
-        paused={false}
-        options={{
-          height: 50,
-          amplitude: 30,
-          speed: 0.25,
-          points: 5,
-        }}
-      /> */}
+      <div>
+        <div style={{ position: "relative" }}>
+          <h1
+            className=""
+            style={{
+              marginTop: "50px",
+              paddingTop: "10px",
+              fontWeight: "bold",
+              marginBottom: "0px",
+              textAlign: "center",
+            }}
+          >
+            Partnerships
+          </h1>
+          <span
+            style={{
+              display: "block",
+              justifyContent: "center",
+              position: "relative", // Change the position to relative
+              top: "10px", // Adjust the top value to control the distance between the title and the underline
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "100px",
+              height: "8px",
+              backgroundColor: "#9dcd5a",
+              borderRadius: "5px",
+            }}
+          ></span>
+
+          <div className="container mt-5">
+            <div className="row">
+              <div className="col-md-3 col-sm-6 mb-4">
+                <img src={Prices} alt="Image 1" className="img-fluid" />
+                <div className="image-text text-center">
+                  Choose the right plan
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-6 mb-4">
+                <img src={Pay} alt="Image 2" className="img-fluid" />
+                <div className="image-text text-center">Pay for the plan</div>
+              </div>
+              <div className="col-md-3 col-sm-6 mb-4">
+                <img src={Calendar} alt="Image 3" className="img-fluid" />
+                <div className="image-text text-center">
+                  Select a date and time
+                </div>
+              </div>
+              <div className="col-md-3 col-sm-6 mb-4">
+                <img src={Session} alt="Image 4" className="img-fluid" />
+                <div className="image-text text-center">Join the session</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>Eikhane boshbe Student Corner.</div>
+
       <div
         style={{
           backgroundColor: "#4F2D92",
@@ -326,6 +375,15 @@ function Home() {
           </div>
         </div>
       </div>
+
+      <div
+        style={{
+          backgroundColor: "#4F2D92",
+          color: "#FFFFFF",
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      ></div>
       <Footer />
     </>
   );

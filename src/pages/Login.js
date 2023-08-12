@@ -68,7 +68,7 @@ function LoginModule() {
                   style={{ width: "100%" }}
                 >
                   <MDBIcon fas icon="lock me-3" size="lg" />
-                  <MDBInput label="Password" id="form3" type="password" />
+                  <MDBInput label="Pin" id="form3" type="password" />
                 </div>
 
                 <MDBBtn className="mb-4" size="lg" style={{ backgroundColor: "#4F2D92", borderRadius: "25px" }}>

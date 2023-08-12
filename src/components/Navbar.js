@@ -55,7 +55,7 @@ function Navigation() {
             </Nav.Link>
             <Nav.Link>
               <Link to="/pricing">
-                <span style={{ fontWeight: "", color: "grey", textDecoration: "none" }}>Pricing</span>
+                <span style={{ fontWeight: "", color: "grey", textDecoration: "none" }}>Plans</span>
               </Link>
             </Nav.Link>
             <Nav.Link>
