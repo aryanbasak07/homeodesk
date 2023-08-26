@@ -59,6 +59,11 @@ function Navigation() {
               </Link>
             </Nav.Link>
             <Nav.Link>
+              <Link to="/studentcorner">
+                <span style={{ fontWeight: "", color: "grey", textDecoration: "none" }}>Student Corner</span>
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
               <Link to="/contact">
                 <span style={{ fontWeight: "", color: "grey", textDecoration: "none" }}>Contact us</span>
               </Link>

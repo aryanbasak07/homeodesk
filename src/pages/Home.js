@@ -19,6 +19,14 @@ import Muko from "../components/assets/muko.png";
 import Skin from "../components/assets/skin.png";
 import Head from "../components/assets/head.png";
 import { Link } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
+import Tab from "react-bootstrap/Tab";
+import Arth from "../components/assets/arth.png";
+import Sugar from "../components/assets/sugar.png";
+import Mota from "../components/assets/mota.png";
+import Coun from "../components/assets/counter.png";
+import Fit from "../components/assets/fit.png";
+import Partner from "../components/assets/partner.png";
 
 import {
   MDBCard,
@@ -57,8 +65,9 @@ function Home() {
           display: "flex",
           backgroundColor: "#4F2D92",
           color: "#FFFFFF",
-          height: "550px",
-          backgroundSize: "cover",
+          height: "500px",
+          width: "1530px",
+          backgroundSize: "stretch",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
@@ -77,7 +86,7 @@ function Home() {
             alignItems: "center",
           }}
         >
-          <MDBCard style={{}}>
+          <MDBCard style={{marginTop: "200px", marginLeft: "0px"}}>
             <MDBCardBody>
               <MDBCardTitle>Welcome to HomeoDesk!</MDBCardTitle>
               <MDBCardText>
@@ -85,13 +94,11 @@ function Home() {
                 experience and an amazing team of doctors, we are committed to
                 offer you with the best services.
               </MDBCardText>
-              <MDBBtn style={{ backgroundColor: "#4F2D92" }}>
-                <a>
-                  <Link to="/signup" style={{ color: "#FFFFFF" }}>
-                    Join Us
-                  </Link>
-                </a>
-              </MDBBtn>{" "}
+              <Link to="/signup" style={{ color: "#FFFFFF" }}>
+                <MDBBtn style={{ backgroundColor: "#4F2D92" }}>
+                  <a>Join Us</a>
+                </MDBBtn>
+              </Link>
               {/* Adding a button to the card */}
             </MDBCardBody>
           </MDBCard>
@@ -114,7 +121,7 @@ function Home() {
             position: "relative",
           }}
         >
-          Our Specialities Consultation - 3 : 1 Career Queries
+          Our Specialities
           <span
             style={{
               display: "flex",
@@ -148,11 +155,24 @@ function Home() {
                 Consultation Sessions With Licensed & Verified Experts
               </h1>
               <p className="mb-4">
-                At Homeodesk, we believe that the key to optimal well-being lies
-                in treating the individual, not just the symptoms. Our team of
-                certified homeopathic experts is dedicated to understanding your
-                unique needs and crafting tailored solutions that resonate with
-                your body and mind.
+                At Homeodesk, we hold a strong belief in the power of holistic
+                well-being, recognizing the importance of treating the
+                individual as a whole, rather than simply addressing isolated
+                symptoms. Our distinguished team of certified homeopathic
+                experts is unwavering in their commitment to thoroughly
+                comprehend your unique needs. This allows us to create tailored
+                solutions that deeply resonate with both your body and mind,
+                fostering a comprehensive sense of healing.
+              </p>
+              <p>
+                Our approach is rooted in delving into the underlying causes,
+                working to restore balance and promote long-lasting wellness.
+                With an unwavering dedication to personalized care, we strive to
+                craft a therapeutic journey that aligns with your distinct
+                nature and requirements. In a world where individuality is
+                paramount, Homeodesk stands as your partner in achieving genuine
+                well-being. Our mission is centered on not just achieving
+                health, but on enhancing the very quality of your life.
               </p>
             </Col>
 
@@ -202,59 +222,150 @@ function Home() {
         </h1>
       </div>
       <div className="mt-5 container d-flex flex-column flex-md-row justify-content-md-center gap-4">
-        <MDBCard
-          alignment="center"
-          className="mb-4 image-center d-flex flex-column align-items-center"
-        >
-          <MDBCardImage
-            position="top"
-            alt="..."
-            src={Text}
-            style={{ height: "250px", width: "250px" }}
-          />
-          <MDBCardBody>
-            <MDBCardTitle style={{ fontSize: "30px" }}>
-              <span style={{ fontStyle: "bold" }}>Text Consultation</span>
-            </MDBCardTitle>
-            <MDBCardText>Rs 500 per session</MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
+        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+          <Row>
+            <Col sm={3}>
+              <Nav variant="pills" className="flex-column">
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey="first"
+                    style={{ backgroundColor: "#4F2D92", color: "#FFFFFF" }}
+                    active
+                  >
+                    Text Consultation
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey="second"
+                    style={{ backgroundColor: "#4F2D92", color: "#FFFFFF" }}
+                  >
+                    Audio Consultation
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    eventKey="third"
+                    style={{ backgroundColor: "#4F2D92", color: "#FFFFFF" }}
+                  >
+                    Video Consultation
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Col>
+            <Col sm={9}>
+              <Tab.Content>
+                <Tab.Pane eventKey="first">
+                  <MDBCard
+                    alignment="center"
+                    className="mb-4 image-center d-flex flex-column align-items-center"
+                  >
+                    <MDBCardImage
+                      position="top"
+                      alt="..."
+                      src={Text}
+                      style={{ height: "250px", width: "250px" }}
+                    />
+                    <MDBCardBody>
+                      <MDBCardTitle style={{ fontSize: "30px" }}>
+                        <span style={{ fontStyle: "bold" }}>
+                          Text Consultation
+                        </span>
+                      </MDBCardTitle>
+                      <MDBCardText>
+                        <ul style={{ listStyle: "none", paddingLeft: "0px" }}>
+                          <li>Convenient and accessible from anywhere</li>
+                          <li>Real-time, instant communication</li>
+                          <li>Flexible scheduling options</li>
+                          <li>Secure and private conversations</li>
+                          <li>Expert advice and guidance</li>
+                        </ul>
+                      </MDBCardText>
+                    </MDBCardBody>
+                  </MDBCard>
+                </Tab.Pane>
+                <Tab.Pane eventKey="second">
+                  <MDBCard
+                    alignment="center"
+                    className="mb-4 image-center d-flex flex-column align-items-center"
+                  >
+                    <MDBCardImage
+                      position="top"
+                      alt="..."
+                      src={Audiocall}
+                      style={{ height: "250px", width: "250px" }}
+                    />
+                    <MDBCardBody>
+                      <MDBCardTitle style={{ fontSize: "30px" }}>
+                        <span
+                          style={{
+                            fontStyle: "bold",
+                            justifyContent: "center",
+                          }}
+                        >
+                          Audio Consultation
+                        </span>
+                      </MDBCardTitle>
+                      <MDBCardText>
+                        <ul
+                          style={{
+                            listStyle: "none",
+                            justifyContent: "center",
+                            paddingLeft: "0px",
+                          }}
+                        >
+                          <li>Real-time, voice-based communication</li>
+                          <li>Convenient and accessible from anywhere</li>
+                          <li>Flexible scheduling options</li>
+                          <li>Secure and private conversations</li>
+                          <li>Expert advice and guidance</li>
+                          <li>High-quality audio connections</li>
+                        </ul>
+                      </MDBCardText>
+                    </MDBCardBody>
+                  </MDBCard>
+                </Tab.Pane>
 
-        <MDBCard
-          alignment="center"
-          className="mb-4 image-center d-flex flex-column align-items-center"
-        >
-          <MDBCardImage
-            position="top"
-            alt="..."
-            src={Audiocall}
-            style={{ height: "250px", width: "250px" }}
-          />
-          <MDBCardBody>
-            <MDBCardTitle style={{ fontSize: "30px" }}>
-              <span style={{ fontStyle: "bold" }}>Audio Consultation</span>
-            </MDBCardTitle>
-            <MDBCardText>Rs 1000 per session</MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-
-        <MDBCard
-          alignment="center"
-          className="mb-4 image-center d-flex flex-column align-items-center"
-        >
-          <MDBCardImage
-            position="top"
-            alt="..."
-            src={Videocall}
-            style={{ height: "250px", width: "250px" }}
-          />
-          <MDBCardBody>
-            <MDBCardTitle style={{ fontSize: "30px" }}>
-              <span style={{ fontStyle: "bold" }}>Video Consultation</span>
-            </MDBCardTitle>
-            <MDBCardText>Rs 1500 per session</MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
+                <Tab.Pane eventKey="third">
+                  <MDBCard
+                    alignment="center"
+                    className="mb-4 image-center d-flex flex-column align-items-center"
+                  >
+                    <MDBCardImage
+                      position="top"
+                      alt="..."
+                      src={Videocall}
+                      style={{ height: "250px", width: "250px" }}
+                    />
+                    <MDBCardBody>
+                      <MDBCardTitle style={{ fontSize: "30px" }}>
+                        <span style={{ fontStyle: "bold" }}>
+                          Video Consultation
+                        </span>
+                      </MDBCardTitle>
+                      <MDBCardText>
+                        <ul
+                          style={{
+                            listStyle: "none",
+                            justifyContent: "center",
+                            paddingLeft: "0px",
+                          }}
+                        >
+                          <li>Real-time, face-to-face communication</li>
+                          <li>Convenient and accessible from anywhere</li>
+                          <li>Flexible scheduling options</li>
+                          <li>Secure and private conversations</li>
+                          <li>Expert advice and guidance</li>
+                          <li>High-quality video and audio connections</li>
+                        </ul>
+                      </MDBCardText>
+                    </MDBCardBody>
+                  </MDBCard>
+                </Tab.Pane>
+              </Tab.Content>
+            </Col>
+          </Row>
+        </Tab.Container>
       </div>
       <div>
         <div style={{ position: "relative" }}>
@@ -287,31 +398,50 @@ function Home() {
 
           <div className="container mt-5">
             <div className="row">
-              <div className="col-md-3 col-sm-6 mb-4">
-                <img src={Prices} alt="Image 1" className="img-fluid" />
-                <div className="image-text text-center">
-                  Choose the right plan
-                </div>
+              <div className="col-md-6 mb-4">
+                <p>
+                  At HomeoDesk, we believe in the power of collaboration and
+                  working together to create innovative solutions for the
+                  betterment of the homeopathy community. Our commitment to
+                  excellence extends beyond our products and services; it also
+                  encompasses the valuable partnerships we cultivate. We're
+                  dedicated to building strong relationships with organizations
+                  that share our passion for holistic wellness and
+                  patient-centric care.
+                </p>
+                <p>
+                  Collaborate with HomeoDesk to unlock new possibilities in
+                  homeopathy. Whether you're an educational institution, a
+                  research center, a healthcare provider, or an organization
+                  with a vested interest in holistic wellness, we welcome the
+                  opportunity to explore how we can work together to make a
+                  meaningful impact.
+                </p>
+                <Link to="/contact">
+                  <MDBBtn
+                    style={{
+                      backgroundColor: "#4F2D92",
+                      alignSelf: "center",
+                      width: "150px",
+                    }}
+                    href="#"
+                  >
+                    Collaborate with Us
+                  </MDBBtn>
+                </Link>
               </div>
-              <div className="col-md-3 col-sm-6 mb-4">
-                <img src={Pay} alt="Image 2" className="img-fluid" />
-                <div className="image-text text-center">Pay for the plan</div>
-              </div>
-              <div className="col-md-3 col-sm-6 mb-4">
-                <img src={Calendar} alt="Image 3" className="img-fluid" />
-                <div className="image-text text-center">
-                  Select a date and time
-                </div>
-              </div>
-              <div className="col-md-3 col-sm-6 mb-4">
-                <img src={Session} alt="Image 4" className="img-fluid" />
-                <div className="image-text text-center">Join the session</div>
+              <div className="col-md-6 mb-4">
+                <MDBCardImage
+                  style={{ padding: "10px" }}
+                  src={Partner}
+                  fluid
+                  alt="..."
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div>Eikhane boshbe Student Corner.</div>
 
       <div
         style={{
@@ -419,16 +549,18 @@ function Card({ title, imageSrc, text }) {
               expert-guided homeopathic remedies.
             </MDBCardText>
             <MDBCardFooter>
-              <MDBBtn
-                style={{
-                  backgroundColor: "#4F2D92",
-                  alignSelf: "center",
-                  width: "150px",
-                }}
-                href="#"
-              >
-                Consult Now
-              </MDBBtn>
+              <Link to="/hair">
+                <MDBBtn
+                  style={{
+                    backgroundColor: "#4F2D92",
+                    alignSelf: "center",
+                    width: "150px",
+                  }}
+                  href="#"
+                >
+                  Consult Now
+                </MDBBtn>
+              </Link>
             </MDBCardFooter>
           </MDBCardBody>
         </MDBCard>
@@ -455,16 +587,18 @@ function Card({ title, imageSrc, text }) {
               gastrointestinal discomfort.
             </MDBCardText>
             <MDBCardFooter>
-              <MDBBtn
-                style={{
-                  backgroundColor: "#4F2D92",
-                  alignSelf: "center",
-                  width: "150px",
-                }}
-                href="#"
-              >
-                Consult Now
-              </MDBBtn>
+              <Link to="/gastro">
+                <MDBBtn
+                  style={{
+                    backgroundColor: "#4F2D92",
+                    alignSelf: "center",
+                    width: "150px",
+                  }}
+                  href="#"
+                >
+                  Consult Now
+                </MDBBtn>
+              </Link>
             </MDBCardFooter>
           </MDBCardBody>
         </MDBCard>
@@ -490,16 +624,18 @@ function Card({ title, imageSrc, text }) {
               musculoskeletal conditions.
             </MDBCardText>
             <MDBCardFooter>
-              <MDBBtn
-                style={{
-                  backgroundColor: "#4F2D92",
-                  alignSelf: "center",
-                  width: "150px",
-                }}
-                href="#"
-              >
-                Consult Now
-              </MDBBtn>
+              <Link to="/musculoskeletal">
+                <MDBBtn
+                  style={{
+                    backgroundColor: "#4F2D92",
+                    alignSelf: "center",
+                    width: "150px",
+                  }}
+                  href="#"
+                >
+                  Consult Now
+                </MDBBtn>
+              </Link>
             </MDBCardFooter>
           </MDBCardBody>
         </MDBCard>
@@ -531,16 +667,18 @@ function Card({ title, imageSrc, text }) {
               support for stress, anxiety, and emotional imbalances.
             </MDBCardText>
             <MDBCardFooter>
-              <MDBBtn
-                style={{
-                  backgroundColor: "#4F2D92",
-                  alignSelf: "center",
-                  width: "150px",
-                }}
-                href="#"
-              >
-                Consult Now
-              </MDBBtn>
+              <Link to="/mental">
+                <MDBBtn
+                  style={{
+                    backgroundColor: "#4F2D92",
+                    alignSelf: "center",
+                    width: "150px",
+                  }}
+                  href="#"
+                >
+                  Consult Now
+                </MDBBtn>
+              </Link>
             </MDBCardFooter>
           </MDBCardBody>
         </MDBCard>
@@ -571,16 +709,219 @@ function Card({ title, imageSrc, text }) {
               rejuvenate and nourish your skin naturally.
             </MDBCardText>
             <MDBCardFooter>
-              <MDBBtn
-                style={{
-                  backgroundColor: "#4F2D92",
-                  alignSelf: "center",
-                  width: "150px",
-                }}
-                href="#"
-              >
-                Consult Now
-              </MDBBtn>
+              <Link to="/skin">
+                <MDBBtn
+                  style={{
+                    backgroundColor: "#4F2D92",
+                    alignSelf: "center",
+                    width: "150px",
+                  }}
+                  href="#"
+                >
+                  Consult Now
+                </MDBBtn>
+              </Link>
+            </MDBCardFooter>
+          </MDBCardBody>
+        </MDBCard>
+        {/* 6 */}
+        <MDBCard style={CARD_STYLE} alignment="center" key="3">
+          <MDBRipple
+            rippleColor="light"
+            rippleTag="div"
+            className="bg-image hover-overlay"
+          >
+            <MDBCardImage
+              style={{ height: "220px", width: "220px" }}
+              src={Sugar}
+              fluid
+              alt="..."
+            />
+            <a>
+              <div
+                className="mask"
+                style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+              ></div>
+            </a>
+          </MDBRipple>
+          <MDBCardBody>
+            <MDBCardTitle>Diabetics</MDBCardTitle>
+            <MDBCardText>
+              Sugar cravings, high blood pressure, and other health problems.
+            </MDBCardText>
+            <MDBCardFooter>
+              <Link to="/sugar">
+                <MDBBtn
+                  style={{
+                    backgroundColor: "#4F2D92",
+                    alignSelf: "center",
+                    width: "150px",
+                  }}
+                  href="#"
+                >
+                  Consult Now
+                </MDBBtn>
+              </Link>
+            </MDBCardFooter>
+          </MDBCardBody>
+        </MDBCard>
+        {/* 7 */}
+        <MDBCard style={CARD_STYLE} alignment="center" key="3">
+          <MDBRipple
+            rippleColor="light"
+            rippleTag="div"
+            className="bg-image hover-overlay"
+          >
+            <MDBCardImage
+              style={{ height: "220px", width: "220px" }}
+              src={Coun}
+              fluid
+              alt="..."
+            />
+            <a>
+              <div
+                className="mask"
+                style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+              ></div>
+            </a>
+          </MDBRipple>
+          <MDBCardBody>
+            <MDBCardTitle>Counselling</MDBCardTitle>
+            <MDBCardText>
+              Counselling for emotional and psychological issues.
+            </MDBCardText>
+            <MDBCardFooter>
+              <Link to="/coun">
+                <MDBBtn
+                  style={{
+                    backgroundColor: "#4F2D92",
+                    alignSelf: "center",
+                    width: "150px",
+                  }}
+                  href="#"
+                >
+                  Consult Now
+                </MDBBtn>
+              </Link>
+            </MDBCardFooter>
+          </MDBCardBody>
+        </MDBCard>
+        {/* 8 */}
+        <MDBCard style={CARD_STYLE} alignment="center" key="3">
+          <MDBRipple
+            rippleColor="light"
+            rippleTag="div"
+            className="bg-image hover-overlay"
+          >
+            <MDBCardImage
+              style={{ height: "220px", width: "220px" }}
+              src={Mota}
+              fluid
+              alt="..."
+            />
+            <a>
+              <div
+                className="mask"
+                style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+              ></div>
+            </a>
+          </MDBRipple>
+          <MDBCardBody>
+            <MDBCardTitle>Weight Loss</MDBCardTitle>
+            <MDBCardText>Weight loss is easier than you think.</MDBCardText>
+            <MDBCardFooter>
+              <Link to="/weight">
+                <MDBBtn
+                  style={{
+                    backgroundColor: "#4F2D92",
+                    alignSelf: "center",
+                    width: "150px",
+                  }}
+                  href="#"
+                >
+                  Consult Now
+                </MDBBtn>
+              </Link>
+            </MDBCardFooter>
+          </MDBCardBody>
+        </MDBCard>
+        {/* 9 */}
+        <MDBCard style={CARD_STYLE} alignment="center" key="3">
+          <MDBRipple
+            rippleColor="light"
+            rippleTag="div"
+            className="bg-image hover-overlay"
+          >
+            <MDBCardImage
+              style={{ height: "220px", width: "220px" }}
+              src={Fit}
+              fluid
+              alt="..."
+            />
+            <a>
+              <div
+                className="mask"
+                style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+              ></div>
+            </a>
+          </MDBRipple>
+          <MDBCardBody>
+            <MDBCardTitle>Exercise Routine</MDBCardTitle>
+            <MDBCardText>
+              Exercise is the key to a healthy lifestyle.
+            </MDBCardText>
+            <MDBCardFooter>
+              <Link to="/exer">
+                <MDBBtn
+                  style={{
+                    backgroundColor: "#4F2D92",
+                    alignSelf: "center",
+                    width: "150px",
+                  }}
+                  href="#"
+                >
+                  Consult Now
+                </MDBBtn>
+              </Link>
+            </MDBCardFooter>
+          </MDBCardBody>
+        </MDBCard>
+        {/* 10 */}
+        <MDBCard style={CARD_STYLE} alignment="center" key="3">
+          <MDBRipple
+            rippleColor="light"
+            rippleTag="div"
+            className="bg-image hover-overlay"
+          >
+            <MDBCardImage
+              style={{ height: "220px", width: "220px" }}
+              src={Arth}
+              fluid
+              alt="..."
+            />
+            <a>
+              <div
+                className="mask"
+                style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
+              ></div>
+            </a>
+          </MDBRipple>
+          <MDBCardBody>
+            <MDBCardTitle>Arthiritis</MDBCardTitle>
+            <MDBCardText>Arthiritis is a common ailment.</MDBCardText>
+            <MDBCardFooter>
+              <Link to="/arthiritis">
+                <MDBBtn
+                  style={{
+                    backgroundColor: "#4F2D92",
+                    alignSelf: "center",
+                    width: "150px",
+                  }}
+                  href="#"
+                >
+                  Consult Now
+                </MDBBtn>
+              </Link>
             </MDBCardFooter>
           </MDBCardBody>
         </MDBCard>

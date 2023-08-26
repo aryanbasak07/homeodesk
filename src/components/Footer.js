@@ -97,30 +97,40 @@ export default function Footer() {
               >
                 Quick links
               </h6>
+              <Link to="/pricing">
+                <p style={{ color: "#FFFFFF" }}>
+                  <a
+                    style={{ color: "#FFFFFF" }}
+                    href="#!"
+                    className="text-reset"
+                  >
+                    Plans
+                  </a>
+                </p>
+              </Link>
+              <Link to="/signup">
+                <p style={{ color: "#FFFFFF" }}>
+                  <a
+                    style={{ color: "#FFFFFF" }}
+                    href="#!"
+                    className="text-reset"
+                  >
+                    Consult Now
+                  </a>
+                </p>
+              </Link>
               <p style={{ color: "#FFFFFF" }}>
                 <a
                   style={{ color: "#FFFFFF" }}
                   href="#!"
                   className="text-reset"
                 >
-                  Pricing
+                  <Link to="/career" style={{ color: "#FFFFFF" }}>
+                    Career
+                  </Link>
                 </a>
               </p>
-              <p style={{ color: "#FFFFFF" }}>
-                <a
-                  style={{ color: "#FFFFFF" }}
-                  href="#!"
-                  className="text-reset"
-                >
-                  Consult Now
-                </a>
-              </p>
-              <p style={{ color: "#FFFFFF" }}>
-                <a style={{ color: "#FFFFFF" }} href='#!' className='text-reset'>
-                  <Link to="/career" style={{ color: "#FFFFFF" }}>Career</Link>
-                </a>
-              </p>
-              <p style={{ color: "#FFFFFF" }}>
+              {/* <p style={{ color: "#FFFFFF" }}>
                 <a
                   style={{ color: "#FFFFFF" }}
                   href="#!"
@@ -128,7 +138,7 @@ export default function Footer() {
                 >
                   Help
                 </a>
-              </p>
+              </p> */}
               {/* <p style={{ color: "#FFFFFF" }}>
                 <a
                   style={{ color: "#FFFFFF" }}
@@ -140,22 +150,16 @@ export default function Footer() {
               </p> */}
               <p style={{ color: "#FFFFFF" }}>
                 <Link to="/terms">
-                <a
-                  style={{ color: "white" }}
-                  href="#!"
-                >
-                  Terms and Conditions
-                </a>
+                  <a style={{ color: "white" }} href="#!">
+                    Terms and Conditions
+                  </a>
                 </Link>
               </p>
               <p style={{ color: "#FFFFFF" }}>
                 <Link to="/privacypolicy">
-                <a
-                  style={{ color: "white" }}
-                  href="#!"
-                >
-                  Privacy Policy
-                </a>
+                  <a style={{ color: "white" }} href="#!">
+                    Privacy Policy
+                  </a>
                 </Link>
               </p>
             </MDBCol>
